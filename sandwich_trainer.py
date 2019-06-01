@@ -6,11 +6,11 @@ from base_trainer import BaseTrainer
 from structural_losses.tf_approxmatch import approx_match, match_cost
 
 
-class ApproxFisherTrainer(BaseTrainer):
+class SandwichTrainer(BaseTrainer):
 
     def __init__(self, G, D, G_inv, params):
         self.alpha = tf.Variable(0.0, trainable=False)
-        super(ApproxFisherTrainer, self).__init__(G, D, G_inv, params)
+        super(SandwichTrainer, self).__init__(G, D, G_inv, params)
 
     def build(self, inputs):
         rho = 1e-6

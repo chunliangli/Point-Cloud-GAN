@@ -9,7 +9,7 @@ import pdb
 import yaml
 import pprofile
 from model import * #D, G, weights_init, Res_G, D_noro, skipG
-from approxfisher_trainer import ApproxFisherTrainer
+from sandwich_trainer import SandwichTrainer
 
 parser = argparse.ArgumentParser()
 parser.add_argument("--config", type=str, help='path to config file')
@@ -79,7 +79,7 @@ with open(os.path.join(parsed['out_dir'],'log.txt'), 'w') as f:
     f.write(g_inv.__str__() + '\n')
 
 
-trainer = ApproxFisherTrainer(g, d, g_inv, parsed)
+trainer = SandwichTrainer(g, d, g_inv, parsed)
 
 # Start training
 
