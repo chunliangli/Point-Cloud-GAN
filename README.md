@@ -30,5 +30,5 @@ If you find our paper or implementation useful in your research, please cite:
 </tbody>
 </table>
 
-#Acknowledgement
+# Acknowledgement
 Part of our code is from https://github.com/optas/latent_3d_points
